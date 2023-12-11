@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <title>Webpage Design</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+
+        }
+        .header{
+           min-height:100vh;
+           width:100%;
+           background-image: url(./netfiximages/20180829201838-GettyImages-681469612.jpeg);
+           background-position: center;
+           position: relative;
+           background-size: cover;
+        }
+        nav{
+            display:flex;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: space-between;
+            align-items:center;
+           
+        }
+        
+        .nav-links{
+            flex:1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style-type: none;
+            display:inline-block;
+            padding:8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color:black;
+            font-size:25px;
+            text-decoration: none;
+            font-style: bold;
+        } 
+        nav a h2{
+            color:black;
+            font-size:25px;
+            text-decoration: none;
+            position:absolute;
+           
+            
+
+        }
+        nav a img{
+            height: 80px;
+            mix-blend-mode: darken;
+            margin-left: 60px;
+            
+        }
+        .content{
+            width:1200px;
+            height:auto;
+            margin:auto;
+            color:black;
+            position:relative;
+        }
+        .content .par{
+            padding-left: 20px;
+            padding-bottom: 25px;
+            font-family: Arial;
+            font-size: 20px;
+            letter-spacing: 1.2px;
+            line-height:30px;
+            color:black;
+           
+        }
+        .content h1,.event h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size:50px;
+            padding-left: 20px;
+            margin-top:9%;
+            letter-spacing:2px;
+
+        }
+        .content .cn{
+            width: 160px;
+            height:40px;
+            background: green;
+            color:white;
+            border:none;
+            margin-bottom:10px;
+            margin-left:20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor:pointer;
+        }
+        .content .cn a{
+            text-decoration:none ;
+            color:black;
+
+        }
+        .form{
+            width:250px;
+            height:380px;
+            background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            position:absolute;
+            top:180px;
+            left:870px;
+            border-radius:10px;
+            padding:25px;
+        }
+        .form h2{
+            width:220px;
+            font-family: sans-serif;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            margin:2px;
+            padding: 8px;
+        }
+        .form input{
+            width:240px;
+            height:35px;
+            background:transparent;
+            border-bottom:1px solid white;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            letter-spacing: 1px;
+            font-size:15px;
+            margin-top:30px;
+        }
+        .form input:focus{
+            outline:none;
+
+        }
+        ::placeholder{
+            color:white;
+            font-family:Arial, Helvetica, sans-serif
+        }
+        
+        .form .link{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+            text-align:center;
+            border-radius:10px;
+            color:white;
+            
+        }
+        .form.link a{
+            text-decoration: none;
+            color:white;
+            font-family:sans-serif ;
+        }
+        .form .cn{
+            width:220px;
+            height:46px;
+            background-color: yellow;
+            text-align:center;
+            margin-top: 6px;
+            border-radius: 10px;
+        }
+        .form .cn a{
+            color:black;
+            font-size:15px;
+            text-decoration: none;
+
+        }
+        .course{
+            width:80%;
+            margin:auto;
+            text-align:center;
+            padding-top:100px;
+        }
+        .course h1,.event h1{
+            font-size:35px;
+            font-weight:600;
+
+        }
+        .course p{
+            font-size:14px;
+            font-weight:300;
+            line-height:22px;
+            padding:10px;
+        }
+        .row{
+            display:flex;
+            margin-top: 5%;
+            justify-content: space-between;
+           
+        }
+        .course-column{
+            flex-basis: 31%;
+            background-color: lightblue;
+          
+            border-radius: 10px;
+            margin-bottom: 5px;
+            padding: 20px 12px;
+            box-sizing:border-box;
+            transition: 0.5s;
+            margin-left: 5px;
+            margin-right:5px;
+        }
+        .course-column img{
+            height: 150px;
+            width:200px;
+        }
+        .course-column:hover{
+           box-shadow: 0 0 20px 0px rgba(0,0,0,0.2); 
+        }
+        .events{
+            background-color: lightgoldenrodyellow;
+
+        }
+        .info{
+            background-color: lightsalmon;
+            font-family: 'Dancing Script', cursive;
+           text-align: center;
+            border-radius: 10px;
+           
+            width:1200px;
+            height:200px;
+            margin-top:40px;
+            margin-left:34px;
+            margin-bottom: 34px;
+            font-size:23px;
+            letter-spacing: 1.3px;
+            color:brown;
+            line-height:30px;
+            
+            
+        }
+        .info p{
+            padding-top:25px;
+            padding-bottom: 25px;
+            padding-left: 20px;
+            padding-right: 20px;
+            
+            
+           
+
+        }
+        .info  span{
+          text-decoration: bold;
+          font-size:50px;
+           
+        }
+        .event p{
+            font-family: 'Dancing Script', cursive;
+           text-align: center;
+           font-size:23px;
+            letter-spacing: 1.3px;
+            margin-top: 23px;
+            margin-bottom: 23px;
+            color:plum;
+
+        }
+        .footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    color:palevioletred;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.course-event img{
+    width:300px;
+    height:350px;
+    margin: 19px;
+}
+.event .row{
+    display:flex;
+}
+
+@media screen and (max-width: 800px) { 
+           .header{
+           background:white;}
+           .content{
+            width:400px;
+            height:300px;
+            margin-bottom: 4px;
+            padding-bottom: 4px;
+            text-align: center;
+           }
+           .content .par{
+            padding-left: 5px;
+            padding-right:5px;
+            padding-bottom: 5px;
+            font-family: Arial;
+            font-size: 15px;
+            letter-spacing: 1px;
+            line-height:25px;
+            
+           
+        }
+           .nav-links{
+           overflow:hidden;
+           position:relative;
+           
+        }
+
+          
+                .row{
+            display:inline-block;
+            margin-top: 5%;
+            justify-content: space-between;
+           
+        } 
+        .event .row{
+    display:inline-block;
+}
+.course-event img{
+    width:250px;
+    height:350px;
+    margin: 19px;
+}
+.info{
+          
+            font-family: 'Dancing Script', cursive;
+           text-align: center;
+            border-radius: 10px;
+           
+            width:350px;
+            height:200px;
+            margin-top:40px;
+           margin-left:10px;
+           margin-right: 10px;
+            margin-bottom: 10px;
+            font-size:13px;
+            letter-spacing: 1.3px;
+            
+            line-height:15px;
+            
+            
+        }
+        .info  span{
+          text-decoration: none;
+          font-size:23px;
+           
+        }
+        nav a img{
+            height: 80px;
+            mix-blend-mode: darken;
+            margin-left: 150px;
+            
+        }
+        nav a h2{
+            text-align: center;
+            font-size: 23px;
+            padding-left: 20px;
+            padding-right:20px ;
+            
+        }
+           
+        }     
+       
+    </style>
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="innovationwebsite.html"><img src="./netfiximages/WhatsApp Image 2023-12-10 at 6.57.57 PM (1).jpeg" alt="logo"><h2>KIET Innovation Center</h2></a>
+            <div class="nav-links">
+            <ul>
+                <li><a href="innovationwebsite.html">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                
+            </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <h1>KIET<br><span >Innovation</span><br><span>Centre</span></h1>
+            <p class="par">"Innovation is the unrelenting drive to break the<br> status quo and develop anew where few have dared to go."</p>
+            <button class="cn"><a href="">JOIN US</a></button>
+        </div>
+        <div class="form">
+            <h2>LOGIN HERE</h2>
+            <input type="email" name="email" placeholder="EnterEmail Here">
+            <input type="password" name="password" placeholder="Enter Password Here">
+            <button class="cn"><a href="">Login</a></button>
+            <p class="link">Don't have an account<br>
+            <a href="">Sign up here</a></p>
+        </div>
+
+    </section>
+    <div class="info"><p><span>"</span>The Innovation Centre has been set-up to promote innovative work in the Institute to create better talented, creative, and well-rounded engineers.The Centre will offer opportunities to augment your theoretical knowledge through a practice-based curriculum thereby making you more competitive for the job market. 
+        It will also give an opportunity to connect your innovative work with real world problems / industry needs and will also lead to the creation of market ready projects.<span>"</span></p></div>
+    <!----course---------------------->
+    <section class="course">
+        <h1>SCHOOL UNDER US:</h1>
+        
+    <div class="row">
+        <div class="course-column">
+            <img src="./netfiximages/my_healthy_-_ux___ui_design_for_mobile_app.jpg">
+            <h3>School Of UI/UX</h3>
+            <p>UI/UX design is the process of creating user interfaces and experiences that optimise user satisfaction and interaction with a digital product. It involves the careful consideration of aesthetics, functionality, and usability to ensure a cohesive and enjoyable user journey.</p>
+        </div>
+        <div class="course-column">
+            <img src="./netfiximages/AR-VR-Healthcare.jpg">
+            <h3>School Of AR/VR</h3>
+            <p>Virtual reality and augmented reality are two closely-related terms that have been common in the consumer tech space for years. Both are considered forms of extended reality, and rely on devices with screens such as a pair of glasses or goggles</p>
+            
+        </div>
+        <div class="course-column">
+            <img src="./netfiximages/drone.jpg">
+            <h3>School Of Drone</h3>
+            <P>Commercial and small businesses worldwide are either currently using drones or looking to use drones to reduce costs, danger and speed up operations.</P>
+            
+        </div>
+        <div class="course-column">
+            <img src="./netfiximages/news-AI-ML-sevices.png">
+            <h3>School Of AI/ML</h3>
+            <p>AI/ML—short for artificial intelligence (AI) and machine learning (ML)—represents an important evolution in computer science and data processing that is quickly transforming a vast array of industries.</p>
+            
+        </div>
+    </div>
+    <div class="event">
+        <h1>Events:</h1>
+        <p>The student’s team under the guidance of faculty coordinator are working on innovative ideas to develop <br>products/services as per the market need and KIET innovation center also guides and<br> motivates the students to start their own Company/ Start-up with the help of KIET TBI.</p>
+        
+        <div class="row">
+            <div class="course-event">
+                <img src="./netfiximages/acdac05e-a255-4837-a09a-fe4a0b6ec15a.jpg">
+               
+            </div>
+            <div class="course-event">
+                <img src="./netfiximages/oct2020_052.jpg">
+                
+            </div>
+            <div class="course-event">
+                <img src="./netfiximages/IMG_20231103_185755 (1).jpg">
+                
+            </div>
+           
+        </div>
+        
+       
+        
+    </div>
+        
+
+    </div>
+    <div class="footer">
+      
+
+        <div class="row">
+            <div class="col">
+                <a href="#"></a>
+                
+                <a href="#">Privacy</a>
+                <a href="#">About us</a>
+            </div>
+            <div class="col">
+                <a href="#">School of UI/UX</a>
+                <a href="#">School of Drone</a>
+                <a href="#">School of AR/VR</a>
+                <a href="#">school of AI/ML</a>
+            </div>
+            
+            <div class="col">
+                
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+   </div>
+    
+</body>
+</html>
